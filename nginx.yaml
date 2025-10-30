@@ -1,0 +1,14 @@
+- name: install nginx in frontend servers
+  hosts: dynamic_frontend
+  become: yes
+  tasks:
+    - name: insatll nginx 
+      ansible.builtin.dnf:
+        name: nginx
+        state: present
+
+    - name: restart nginx 
+      ansible.builtin.systemd_service:
+        name: nginx
+        state: restarted
+        enabled: yes
