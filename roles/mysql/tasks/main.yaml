@@ -3,6 +3,13 @@
     name: mysql-server
     state: present
 
+- name: install python libraries
+  ansible.builtin.pip:
+    name:
+      - botocore
+      - boto3
+    state: present
+
 - name: setup mysql root password
   ansible.builtin.command: mysql_secure_installation --set-root-pass {{ MYSQL_ROOT_PASS }}
     
