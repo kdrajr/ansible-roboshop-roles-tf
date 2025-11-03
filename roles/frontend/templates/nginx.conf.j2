@@ -27,7 +27,7 @@ http {
     include /etc/nginx/conf.d/*.conf;
 
     upstream backend_alb {
-            server internal-roboshop-dev-backend-alb-221558884.us-east-1.elb.amazonaws.com:80; # Replace with your ALB's DNS name and port
+            server catalogue.backend-alb-dev.sniggie.fun:80; # Replace with your ALB's DNS name and port
             
         }
 
