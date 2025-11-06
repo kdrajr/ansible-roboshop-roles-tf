@@ -22,6 +22,8 @@
   loop:
     - PyMySQL
     - cryptography
+    - botocore
+    - boto3
     
 - name: load mysql schema
   community.mysql.mysql_db:
