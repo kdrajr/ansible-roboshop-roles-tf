@@ -12,10 +12,16 @@
 
 - name: setup mysql root password
   ansible.builtin.command: mysql_secure_installation --set-root-pass {{ MYSQL_ROOT_PASS }}
-    
+
 
 - name: enable and start mysql server
   ansible.builtin.service:
     name: mysqld
     state: restarted
     enabled: true
+
+
+# To avoid MySQL Error 1130 Host not allowed to connect to this MySQL Server from shipping server
+- name: setup mysql root password for the second time
+  ansible.builtin.command: mysql_secure_installation --set-root-pass {{ MYSQL_ROOT_PASS }}
+  ignore_errors: true
