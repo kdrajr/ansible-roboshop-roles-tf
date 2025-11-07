@@ -1,12 +1,12 @@
-CART_HOST: cart-{{ env }}.sniggie.fun
-CATALOGUE_HOST: catalogue-{{ env }}.sniggie.fun
+CART_HOST: cart.backend-alb-{{ env }}.sniggie.fun
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.sniggie.fun
 MONGODB_HOST: mongodb-{{ env }}.sniggie.fun
 MYSQL_HOST: mysql-{{ env }}.sniggie.fun
-PAYMENT_HOST: payment-{{ env }}.sniggie.fun
+PAYMENT_HOST: payment.backend-alb-{{ env }}.sniggie.fun
 RABBITMQ_HOST: rabbitmq-{{ env }}.sniggie.fun
 REDIS_HOST: redis-{{ env }}.sniggie.fun
-SHIPPING_HOST: shipping-{{ env }}.sniggie.fun
-USER_HOST : user-{{ env }}.sniggie.fun
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.sniggie.fun
+USER_HOST : user.backend-alb-{{ env }}.sniggie.fun
 
 
 
