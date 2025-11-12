@@ -7,6 +7,9 @@
     - gcc
     - python3-devel
 
+- name: Restart playbook after installing Python packages
+  meta: reset_connection
+
 - name: install python requirements
   ansible.builtin.pip:
     requirements: /app/requirements.txt
