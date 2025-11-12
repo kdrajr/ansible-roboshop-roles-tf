@@ -4,7 +4,7 @@
     state: present
   loop:
     - python3
-    - gcc
+    #- gcc   commented this to avoid openssl version mismatch and gcc already installed
     - python3-devel
 
 
