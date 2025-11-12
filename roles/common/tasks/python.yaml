@@ -1,14 +1,12 @@
-- name: install python packages
-  ansible.builtin.dnf:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - python3
-    - gcc
-    - python3-devel
+# - name: install python packages
+#   ansible.builtin.dnf:
+#     name: "{{ item }}"
+#     state: present
+#   loop:
+#     - python3
+#     - gcc
+#     - python3-devel
 
-- name: Restart playbook after installing Python packages
-  meta: reset_connection
 
 - name: install python requirements
   ansible.builtin.pip:
