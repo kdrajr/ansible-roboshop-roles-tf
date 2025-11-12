@@ -1,11 +1,11 @@
-- name: install python packages
-  ansible.builtin.dnf:
-    name: "{{ item }}"
-    state: present
-  loop:
-    - python3
-    #- gcc   commented this to avoid openssl version mismatch and gcc already installed
-    - python3-devel
+# - name: install python packages
+#   ansible.builtin.dnf:
+#     name: "{{ item }}"
+#     state: present
+#   loop:
+#     - python3
+#     - gcc
+#     - python3-devel
 
 
 - name: install python requirements
